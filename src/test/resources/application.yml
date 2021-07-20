@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    properties:
+      schema:
+        registry:
+          url: mock://
+    consumer:
+      auto-offset-reset: earliest
+      group-id: com.github.douglsantos
+test.topic: topic_new_user

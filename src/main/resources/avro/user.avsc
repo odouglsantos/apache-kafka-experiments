@@ -1,0 +1,42 @@
+{
+  "namespace": "avro.example.entity",
+  "type": "record",
+  "name": "UserAvroEntity",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "avro.java.string": "String",
+      "doc": "Full name of User"
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "doc": "Age at the time of registration"
+    },
+    {
+      "name": "birth",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "User's birthdate"
+    },
+    {
+      "name": "money",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 8,
+        "scale": 2
+      }
+    },
+    {
+      "name": "registration_date",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
